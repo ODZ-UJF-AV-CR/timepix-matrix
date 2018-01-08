@@ -11,12 +11,12 @@ You'll likely need to modify the shift array to suit your application.
 
 Byte for each value describes:
 
-|bits | contents |
-|-----------------
-|2 bits | bit mode (Medipix, ToT, 1 hit, Timepix) |
-|4 bits | threshold value (0..15) |
-|1 bit | test bit |
-|1 bit | is the pixel masked |
+| bits  | contents |
+| --- | --- |
+| 2 bits | bit mode (Medipix, ToT, 1 hit, Timepix) |
+| 4 bits | threshold value (0..15) |
+| 1 bit | test bit |
+| 1 bit | is the pixel masked |
 
 ## Syntax: 
 ```

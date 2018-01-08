@@ -1,6 +1,5 @@
 # timepix-matrix: Python scripts for altering Timepix bpc files
 
-
 ## In short:
 Alters the mode in 256x256 byte matrix of binary pixel configuration file of a Timepix detector, in order to set individual pixels to specific mode.
 
@@ -22,11 +21,14 @@ Byte for each value describes:
 ```
 $0 <source >output
 ```
-Source: BPC file saved from Pixet Pro - with Medipix mode set for all pixels and threshold values specific for the particular detector.
+### Source: 
+BPC file saved from Pixet Pro - with Medipix mode set for all pixels and threshold values specific for the particular detector.
 
-Stdout: Shifted matrix 
+### Stdout: 
+256x256 bytes bytes matrix, with Mode fields shifted.
 
-Stderr: Sample of the matrix before and after shifting the values
+### Stderr: 
+Text sample of the matrix before and after shifting the values.
 
 ## Authors: 
 Vaclav Stepan, stepan@ujf.cas.cz, 

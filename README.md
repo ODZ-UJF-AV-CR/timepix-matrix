@@ -6,7 +6,11 @@ Assuming the mode in the input file is 0 (Medipix),
 this modifies first two bits of the elements of the matrix to either 01 (ToT mode) or 11 (Timepix)
 You'll likely need to modify the shift array to suit your application.
 
-Syntax: $0 <source >output
+
+Syntax: 
+```
+$0 <source >output
+```
 
 Source: BPC file saved from Pixet Pro - with Medipix mode set for all pixels and threshold values specific for the particular detector.
 

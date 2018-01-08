@@ -2,6 +2,7 @@
 
 ## In short:
 Alters the mode in 256x256 byte matrix of binary pixel configuration file of a Timepix detector, in order to set individual pixels to specific mode.
+Sample files are included.
 
 ## Description:
 Assuming the mode in the input file is 0 (Medipix),

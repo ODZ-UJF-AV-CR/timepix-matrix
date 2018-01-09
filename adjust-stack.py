@@ -18,7 +18,7 @@ import array
 
 def load_binary():
     file = sys.stdin.read()
-    array = struct.unpack("<65536B", file)
+    array = struct.unpack("<131072B", file)
     return array
 
 
@@ -34,20 +34,22 @@ def print_matrix(array):
 def shift_array(array):
 	# shift first two bits of the array from Medipix (00) to ToT or Timepix modes
 	newarray = []
-	for row in range(0,256):
+	for row in range(0,512):
 		for column in range(0,256):
 			# Set first two bits in matrix to set the modes
 			# Since they are 00 now, this sets them accordingly
-			if ((row % 3) == 0) and ((column % 3) == 0):
-				pad = 192
+			if ((row % 5) == 0) and ((column % 5) == 0):
+				pad = 0
+				#pad = 192
 			else:
-				pad = 64
+				pad = -192+64
+				#pad = 64
 			newarray.append(pad+int(array[256*row+column]))
 	return newarray
 
 def print_bytes(array):
 	# Print the array to stdout
-	for row in range(0,256):
+	for row in range(0,512):
 		for column in range(0,256):
 			sys.stdout.write(chr(int(array[256*row+column])))
 
